@@ -1,0 +1,30 @@
+{
+  "name": "iOSDFULibrary",
+  "version": "3.1.0",
+  "summary": "DFU for iOS",
+  "description": "Your description here.",
+  "homepage": "https://github.com/NordicSemiconductor/IOS-Pods-DFU-Library",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Berg, Mostafa": "Mostafa.Berg@nordicsemi.no"
+  },
+  "social_media_url": "https://twitter.com/nordictweets",
+  "platforms": {
+    "ios": "8.0",
+    "osx": "10.10"
+  },
+  "source": {
+    "git": "https://github.com/NordicSemiconductor/IOS-Pods-DFU-Library.git",
+    "tag": "3.1.0"
+  },
+  "source_files": "Sources/**/*",
+  "frameworks": "Foundation",
+  "dependencies": {
+    "Zip": [
+      "~> 0.7"
+    ]
+  }
+}

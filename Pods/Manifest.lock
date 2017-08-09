@@ -1,0 +1,19 @@
+PODS:
+  - iOSDFULibrary (3.1.0):
+    - Zip (~> 0.7)
+  - Zip (0.7.0)
+
+DEPENDENCIES:
+  - iOSDFULibrary (from `iOSDFULibrary.podspec`)
+
+EXTERNAL SOURCES:
+  iOSDFULibrary:
+    :path: iOSDFULibrary.podspec
+
+SPEC CHECKSUMS:
+  iOSDFULibrary: db0a501065d996e639dd6c0d5c99ea4dca649bb0
+  Zip: e34513299ac38c0686d5b24504da7ce343799ab9
+
+PODFILE CHECKSUM: 98c3919ca8e6ea48741926761670f53b099b7ad2
+
+COCOAPODS: 1.3.1
