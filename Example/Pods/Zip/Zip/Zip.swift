@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import minizip
+import Minizip
 
 /// Zip error type
 public enum ZipError: Error {
@@ -199,7 +199,8 @@ public class Zip {
                 }
             }
 
-            fclose(filePointer)
+            if let fp = filePointer { fclose(fp) }
+
             crc_ret = unzCloseCurrentFile(zip)
             if crc_ret == UNZ_CRCERROR {
                 throw ZipError.unzipFail
