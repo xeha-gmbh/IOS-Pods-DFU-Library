@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Minizip
+import minizip
 
 /// Zip error type
 public enum ZipError: Error {
@@ -148,7 +148,7 @@ public class Zip {
 
             var pathString = String(cString: fileName)
             
-            guard pathString.count > 0 else {
+            guard pathString.characters.count > 0 else {
                 throw ZipError.unzipFail
             }
 
@@ -166,8 +166,8 @@ public class Zip {
 
             let creationDate = Date()
 
-            let directoryAttributes = [FileAttributeKey.creationDate : creationDate,
-                                       FileAttributeKey.modificationDate : creationDate]
+            let directoryAttributes = [FileAttributeKey.creationDate.rawValue : creationDate,
+                                       FileAttributeKey.modificationDate.rawValue : creationDate]
 
             do {
                 if isDirectory {
@@ -199,8 +199,7 @@ public class Zip {
                 }
             }
 
-            if let fp = filePointer { fclose(fp) }
-
+            fclose(filePointer)
             crc_ret = unzCloseCurrentFile(zip)
             if crc_ret == UNZ_CRCERROR {
                 throw ZipError.unzipFail
